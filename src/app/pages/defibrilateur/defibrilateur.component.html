@@ -1,0 +1,246 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-grid>
+      <ion-row class=" ion-justify-content-between">
+        <ion-col>
+
+          <ion-title class="ion-title">MENU</ion-title>
+
+          <ul>
+            <li><a routerLink="/defibrilateur" routerLinkActive="active"> DÉFIBRILATEURS</a></li><br><br>
+            <li><a routerLink="/commandes" routerLinkActive="active"> COMMANDES</a></li>
+          </ul>
+
+        </ion-col>
+        <ion-col size="1">
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--<a routerLink="/commandes"  routerLinkActive="active">-->
+  </ion-header>
+
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+  <ion-app>
+    <ion-header>
+      <ion-grid>
+        <ion-row class=" ion-justify-content-between">
+          <ion-col>
+            <ion-img id="logo" [src]="logo_lifeaz" alt=" logo"></ion-img>
+          </ion-col>
+          <ion-col size="1">
+            <ion-menu-toggle>
+
+              <ion-img id="menu" [src]="logo_menu" alt=" logo"></ion-img>
+
+            </ion-menu-toggle>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-header>
+
+
+    <ion-content class="ion-padding">
+
+      <h2>MES DÉFIBRILATEURS</h2>
+
+
+      <p>Retrouvez-ici tous vos défibrillateurs. Vous pouvez voir s’ils sont fonctionnels, s’ils nécessitent de la
+        maintenance, et en rechercher un en particulier.</p>
+
+
+      <section class="card">
+        <ion-card>
+          <ion-card-header>
+            <h5>CLA012345678</h5>
+          </ion-card-header>
+          <ion-card-content>
+            <strong>Mairie d’Elattes,</strong> 12 Rue Jacques Prévert, 42980 Elattes
+          </ion-card-content>
+          <ion-grid>
+            <ion-row class=" ion-justify-content-around">
+              <ion-col size="8">
+
+              </ion-col>
+              <ion-col size="1">
+                <ion-img id="logo_check" [src]="logo_check" alt=" logo"></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+
+        <ion-card>
+          <ion-card-header>
+            <h5>CLA123456789</h5>
+          </ion-card-header>
+          <ion-card-content>
+            Gymnase Pierre Peyroche
+            1Bis Place des Combattants 42980 Elattes
+          </ion-card-content>
+          <ion-grid>
+            <ion-row class=" ion-justify-content-around">
+              <ion-col size="8">
+
+              </ion-col>
+              <ion-col size="1">
+                <ion-img id="logo_check" [src]="logo_check" alt=" logo"></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+
+
+
+
+        <ion-card>
+          <ion-card-header>
+            <h5>CLA234567890</h5>
+          </ion-card-header>
+          <ion-card-content>
+            École municipale
+            26 Rue Jacques Prévert,
+            42980 Elattes
+          </ion-card-content>
+          <ion-grid>
+            <ion-row class=" ion-justify-content-around">
+              <ion-col size="8">
+
+              </ion-col>
+              <ion-col size="1">
+                <ion-img id="logo_danger" [src]="logo_danger" alt=" logo"></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+
+        <ion-card>
+          <ion-card-header>
+            <h5>CLA34567890 </h5>
+          </ion-card-header>
+          <ion-card-content>
+            Épicerie Samoreau
+            17 Boulevard du Commandant Kalchman, 42980 Elattes
+          </ion-card-content>
+          <ion-grid>
+            <ion-row class=" ion-justify-content-around">
+              <ion-col size="8">
+
+              </ion-col>
+              <ion-col size="1">
+                <ion-img id="logo_check" [src]="logo_check" alt=" logo"></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+
+        <ion-card>
+          <ion-card-header>
+            <h5>CLA456789012</h5>
+          </ion-card-header>
+          <ion-card-content>
+            Moussa&Telli Réparation Informatique
+            90 Impasse des Cèdres, 42980 Elattes
+          </ion-card-content>
+          <ion-grid>
+            <ion-row class=" ion-justify-content-around">
+              <ion-col size="8">
+
+              </ion-col>
+              <ion-col size="1">
+                <ion-img id="logo_inter" [src]="logo_inter" alt=" logo"></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+      </section>
+
+
+      <!--
+      <ion-footer>
+        <ion-toolbar>
+          <ion-title>
+            Footer
+          </ion-title>
+        </ion-toolbar>
+      </ion-footer> -->
+
+
+
+
+
+
+
+
+
+
+      <!--bootstrap-->
+
+      <!-- animation
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler ms-auto"
+        type="button"
+        (click)="externalContent1.toggle()"
+        aria-controls="navbarToggleExternalContent1"
+        [attr.aria-expanded]="!externalContent1.collapsed"
+        aria-label="Toggle navigation"
+      >
+      <div class="animated-icon1" [ngClass]="{'open':!externalContent1.collapsed}"><span></span><span></span><span></span></div>
+      </button>
+    </div>
+  </nav>
+  <div
+    class="collapse"
+    id="navbarToggleExternalContent1"
+    mdbCollapse
+    #externalContent1="mdbCollapse"
+  >
+    <div class="bg-light shadow-3 p-4">
+      <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
+      <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
+      <button class="btn btn-link btn-block m-0">Link 3</button>
+    </div>
+  </div> -->
+
+
+
+
+      <!--coté droit
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+        <button
+      class="navbar-toggler ms-auto"
+      type="button"
+      (click)="externalContent.toggle()"
+      aria-controls="navbarToggleExternalContent"
+      [attr.aria-expanded]="!externalContent.collapsed"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+<div
+  class="collapse"
+  id="navbarToggleExternalContent"
+  mdbCollapse
+  #externalContent="mdbCollapse"
+>
+  <div class="bg-light shadow-3 p-4">
+     <button class="btn btn-link btn-block border-bottom m-0" >Link 1</button>
+     <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
+     <button class="btn btn-link btn-block m-0">Link 3</button>
+  </div>
+</div> -->

@@ -1,0 +1,49 @@
+<ion-menu contentId="main-content">
+    <ion-header>
+        <ion-grid>
+            <ion-row class=" ion-justify-content-between">
+                <ion-col>
+
+                    <ion-title class="ion-title">MENU</ion-title>
+
+                    <ul>
+                        <li><a routerLink="/defibrilateur" routerLinkActive="active"> DÉFIBRILATEURS</a></li><br><br>
+                        <li><a routerLink="/commandes" routerLinkActive="active"> COMMANDES</a></li>
+                    </ul>
+
+                </ion-col>
+                <ion-col size="1">
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <!--<a routerLink="/commandes"  routerLinkActive="active">-->
+    </ion-header>
+
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+    <ion-app>
+        <ion-header>
+            <ion-grid>
+                <ion-row class=" ion-justify-content-between">
+                    <ion-col>
+                        <ion-img id="logo" [src]="logo_lifeaz" alt=" logo"></ion-img>
+                    </ion-col>
+                    <ion-col size="1">
+                        <ion-menu-toggle>
+
+                            <ion-img id="menu" [src]="logo_menu" alt=" logo"></ion-img>
+
+                        </ion-menu-toggle>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </ion-header>
+
+
+        <ion-content class="ion-padding">
+
+            <h2>COMMANDES</h2>
