@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 import { DefibrilateurComponent } from './pages/defibrilateur/defibrilateur.component';
 import { CommandesComponent } from './pages/commandes/commandes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommandesComponent } from './pages/commandes/commandes.component';
   imports: [
     BrowserModule,
     AppRountingModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
