@@ -1,17 +1,17 @@
 <ion-menu contentId="main-content">
   <ion-header>
+    <ion-title class="ion-title">Menu</ion-title>
     <ion-grid>
-      <ion-row class=" ion-justify-content-between">
-        <ion-col>
+        
+      <ion-row class=" ion-justify-content-between" id="contentMenu">
 
-          <ion-title class="ion-title">MENU</ion-title>
-
+        
           <ul>
             <li><a routerLink="/defibrilateur" routerLinkActive="active"> DÉFIBRILATEURS</a></li><br><br>
             <li><a routerLink="/commandes" routerLinkActive="active"> COMMANDES</a></li>
           </ul>
 
-        </ion-col>
+        
         <ion-col size="1">
 
         </ion-col>
@@ -46,7 +46,7 @@
 
     <ion-content class="ion-padding">
 
-      <h2>{{monTitre}}</h2>
+      <h2>{{Title}}</h2>
 
 
       <p>Retrouvez-ici tous vos défibrillateurs. Vous pouvez voir s’ils sont fonctionnels, s’ils nécessitent de la
@@ -56,10 +56,10 @@
       <section class="card">
         <ion-card>
           <ion-card-header>
-            <h5>CLA012345678</h5>
+            <h5>{{defibrilator.serial}}</h5>
           </ion-card-header>
           <ion-card-content>
-            <strong>Mairie d’Elattes,</strong> 12 Rue Jacques Prévert, 42980 Elattes
+            <strong>{{defibrilator.locationName}}</strong>{{defibrilator.locationAddr}}
           </ion-card-content>
           <ion-grid>
             <ion-row class=" ion-justify-content-around">
@@ -76,7 +76,7 @@
 
         <ion-card>
           <ion-card-header>
-            <h5>CLA123456789</h5>
+            <h5>cdezedeedee</h5>
           </ion-card-header>
           <ion-card-content>
             Gymnase Pierre Peyroche
@@ -164,83 +164,3 @@
       </section>
 
 
-      <!--
-      <ion-footer>
-        <ion-toolbar>
-          <ion-title>
-            Footer
-          </ion-title>
-        </ion-toolbar>
-      </ion-footer> -->
-
-
-
-
-
-
-
-
-
-
-      <!--bootstrap-->
-
-      <!-- animation
-
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler ms-auto"
-        type="button"
-        (click)="externalContent1.toggle()"
-        aria-controls="navbarToggleExternalContent1"
-        [attr.aria-expanded]="!externalContent1.collapsed"
-        aria-label="Toggle navigation"
-      >
-      <div class="animated-icon1" [ngClass]="{'open':!externalContent1.collapsed}"><span></span><span></span><span></span></div>
-      </button>
-    </div>
-  </nav>
-  <div
-    class="collapse"
-    id="navbarToggleExternalContent1"
-    mdbCollapse
-    #externalContent1="mdbCollapse"
-  >
-    <div class="bg-light shadow-3 p-4">
-      <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
-      <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
-      <button class="btn btn-link btn-block m-0">Link 3</button>
-    </div>
-  </div> -->
-
-
-
-
-      <!--coté droit
-
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-        <button
-      class="navbar-toggler ms-auto"
-      type="button"
-      (click)="externalContent.toggle()"
-      aria-controls="navbarToggleExternalContent"
-      [attr.aria-expanded]="!externalContent.collapsed"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-</nav>
-<div
-  class="collapse"
-  id="navbarToggleExternalContent"
-  mdbCollapse
-  #externalContent="mdbCollapse"
->
-  <div class="bg-light shadow-3 p-4">
-     <button class="btn btn-link btn-block border-bottom m-0" >Link 1</button>
-     <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
-     <button class="btn btn-link btn-block m-0">Link 3</button>
-  </div>
-</div> -->

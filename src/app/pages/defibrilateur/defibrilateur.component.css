@@ -1,10 +1,12 @@
+@font-face {
+    font-family: 'lato';
+    src: url(/src/assets/Lato-Regular-400.otf) format("opentype");
+}
 
-@font-face { font-family: 'lato'; src: url(/src/assets/Lato-Regular-400.otf) format("opentype"); }
 
+* {
 
-*{
-
-    font-family:'lato', 'arial', sans-serif;
+    font-family: 'lato', 'arial', sans-serif;
 }
 
 #logo {
@@ -90,8 +92,10 @@ ion-card {
 
 .ion-title {
     color: var(--blanc);
-    text-align: center;
-    margin-left: -50px;
+    margin-left: -45px;
+
+
+
 }
 
 
@@ -100,14 +104,21 @@ ul li {
 
     list-style-type: none;
 
+
 }
 
 a {
     text-decoration: none;
     color: var(--black);
+
 }
 
-ul {
-    margin-top: 15%;
+ul {}
 
+#contentMenu {
+
+
+    margin-top: 100px;
+    width: 100vw;
+    height: 100vh;
 }
