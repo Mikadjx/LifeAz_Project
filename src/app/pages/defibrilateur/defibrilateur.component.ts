@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ThisReceiver } from '@angular/compiler';
+import { AnimateTimings } from '@angular/animations';
 
 
 // Paramétre du composant defibrilateurComponent
@@ -15,7 +16,7 @@ import { ThisReceiver } from '@angular/compiler';
 export class DefibrilateurComponent implements OnInit {
 
 
-  // Variable Image 
+  // Déclaration de Variable Image 
 
   public logo_lifeaz = "assets/LIFEAZ.png"
   public logo_menu = "assets/icon_menu.png"
@@ -25,17 +26,19 @@ export class DefibrilateurComponent implements OnInit {
   public logo_spark = "assets/icon_spark.png"
   public logo_loc = "assets/icon_loc.png"
   public logo_line2 = "assets/Line 2.png"
+  public Title : string;
 
-  // Variable Texte 
+  // Déclaration de Variable des informations BDD 
   
 
-  public Title : string;
+
  defibrilator : any;
  serial:any;
  locatioName: any;
  locationAddr:any;
  state:any;
  electrodesExpiry:any;
+
  
 
 
@@ -46,19 +49,17 @@ constructor(public http: HttpClient) {
 
  
 
+
+/* 
+  Appel D'api permettant de dynamiser notre html en indiquant le end-point de notre serveur NODE JS ( Api_creation) 
+  Test effectué avec console log afin de voir si la requête est ok  */
+
   }
 
   ngOnInit():void{
     this.http.get<any>('http://localhost:5500/defibrilator')
      .subscribe(response => {
-      console.log(response[0]);
       this.defibrilator = response[0];
-    
-      console.log(response[1]);
-      
-
-
-
     
      });
   }

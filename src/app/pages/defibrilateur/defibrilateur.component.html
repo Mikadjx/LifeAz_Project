@@ -1,17 +1,29 @@
+
+<!--Application crée avec Ionic-->
+
+
+
+
+<!--Menu Déroulant LifeAZ Partie caché -->
+
+
 <ion-menu contentId="main-content">
+
   <ion-header>
-    <ion-title class="ion-title">Menu</ion-title>
+    
     <ion-grid>
-        
+      <ion-title class="ion-title">Menu</ion-title>
       <ion-row class=" ion-justify-content-between" id="contentMenu">
 
-        
-          <ul>
-            <li><a routerLink="/defibrilateur" routerLinkActive="active"> DÉFIBRILATEURS</a></li><br><br>
-            <li><a routerLink="/commandes" routerLinkActive="active"> COMMANDES</a></li>
-          </ul>
+        <!--Lien de navigation vers nos pages diverses -->
 
-        
+
+        <ul>
+          <li><a routerLink="/defibrilateur" routerLinkActive="active"> DÉFIBRILATEURS</a></li><br><br>
+          <li><a routerLink="/commandes" routerLinkActive="active"> COMMANDES</a></li>
+        </ul>
+
+
         <ion-col size="1">
 
         </ion-col>
@@ -22,6 +34,7 @@
 
 </ion-menu>
 
+<!--En-tête -->
 
 <div class="ion-page" id="main-content">
   <ion-app>
@@ -52,6 +65,10 @@
       <p>Retrouvez-ici tous vos défibrillateurs. Vous pouvez voir s’ils sont fonctionnels, s’ils nécessitent de la
         maintenance, et en rechercher un en particulier.</p>
 
+      <!--
+    Création de Card 
+    Interpolation pour permettre de récuperer les donnée de la bdd par L'intermédiaire de Node JS
+    La variable défi nous permet de parcourir chaque ligne de notre table defibrilator  -->
 
       <section class="card">
         <ion-card>
@@ -59,7 +76,7 @@
             <h5>{{defibrilator.serial}}</h5>
           </ion-card-header>
           <ion-card-content>
-            <strong>{{defibrilator.locationName}}</strong>{{defibrilator.locationAddr}}
+            <strong>{{defibrilator.locationName}}</strong> {{defibrilator.locationAddr}}
           </ion-card-content>
           <ion-grid>
             <ion-row class=" ion-justify-content-around">
@@ -76,7 +93,7 @@
 
         <ion-card>
           <ion-card-header>
-            <h5>cdezedeedee</h5>
+            <h5>CLA123456789</h5>
           </ion-card-header>
           <ion-card-content>
             Gymnase Pierre Peyroche
@@ -162,5 +179,3 @@
         </ion-card>
 
       </section>
-
-

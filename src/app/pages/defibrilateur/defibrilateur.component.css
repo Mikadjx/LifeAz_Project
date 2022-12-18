@@ -1,13 +1,16 @@
-@font-face {
-    font-family: 'lato';
-    src: url(/src/assets/Lato-Regular-400.otf) format("opentype");
-}
+/* Import de la police "Lato" */
 
 
+/* Modification de la forme sur la totalité  */
 * {
 
     font-family: 'lato', 'arial', sans-serif;
 }
+
+
+
+
+/* Logo + Image */
 
 #logo {
 
@@ -15,7 +18,57 @@
     width: 83px;
     object-fit: contain;
     margin: -5px 5px 5px -10px;
+}
 
+
+#menu {
+    width: 27px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+#logo_check {
+
+    margin: -117px 5px 5px -10px;
+    cursor: pointer;
+}
+
+
+#logo_danger {
+
+    margin: -117px 5px 5px -10px;
+    cursor: pointer;
+}
+
+#logo_inter {
+
+    margin: -117px 5px 5px -10px;
+    cursor: pointer;
+}
+
+
+
+/*Survol du logo   */
+
+#logo_danger:hover {
+
+    transform: scale(1.2);
+
+}
+
+#logo_check:hover {
+
+    transform: scale(1.2);
+}
+
+
+/*Contenu*/
+
+#contentMenu {
+    margin-top: 100px;
+    width: 100vw;
+    height: 100vh;
 }
 
 ion-header {
@@ -33,13 +86,6 @@ ion-header {
 }
 
 
-#menu {
-    width: 27px;
-    height: 20px;
-    cursor: pointer;
-
-}
-
 ion-content h2 {
     align-self: flex-start;
     z-index: 1;
@@ -51,6 +97,31 @@ ion-content h2 {
     font-family: 'Lato';
 }
 
+.ion-title {
+    color: var(--blanc);
+    margin-left: 60px;
+
+}
+
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+
+/*Card*/
+
+ion-card-header h5 {
+    font-weight: 700;
+    color: var(--black);
+}
+
 ion-card-content {
 
     width: 320px;
@@ -59,66 +130,13 @@ ion-card-content {
 
 }
 
-ion-card-header h5 {
-    font-weight: 700;
-    color: var(--black);
+ion-card {
+
+    border-radius: 1%;
+    margin-top: 40px;
 }
-
-#logo_check {
-
-
-    margin: -117px 5px 5px -10px;
-}
-
-#logo_danger {
-
-    margin: -117px 5px 5px -10px;
-}
-
-#logo_inter {
-
-    margin: -117px 5px 5px -10px;
-}
-
 
 .card {
     margin-top: 50px;
 }
 
-ion-card {
-
-    border-radius: 5%;
-}
-
-.ion-title {
-    color: var(--blanc);
-    margin-left: -45px;
-
-
-
-}
-
-
-
-ul li {
-
-    list-style-type: none;
-
-
-}
-
-a {
-    text-decoration: none;
-    color: var(--black);
-
-}
-
-ul {}
-
-#contentMenu {
-
-
-    margin-top: 100px;
-    width: 100vw;
-    height: 100vh;
-}
