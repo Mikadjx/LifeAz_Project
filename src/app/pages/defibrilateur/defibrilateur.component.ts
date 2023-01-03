@@ -16,7 +16,7 @@ import { AnimateTimings } from '@angular/animations';
 export class DefibrilateurComponent implements OnInit {
 
 
-  // Déclaration de Variable Image 
+  // Déclaration de Variable Image
 
   public logo_lifeaz = "assets/LIFEAZ.png"
   public logo_menu = "assets/icon_menu.png"
@@ -28,39 +28,34 @@ export class DefibrilateurComponent implements OnInit {
   public logo_line2 = "assets/Line 2.png"
   public Title : string;
 
-  // Déclaration de Variable des informations BDD 
-  
-
-
- defibrilator : any;
- serial:any;
- locatioName: any;
- locationAddr:any;
- state:any;
- electrodesExpiry:any;
-
  
 
 
+  // Déclaration de Variable des informations BDD
 
-  
+
+//
+public defibrilators : any;
+
+
+
+
 constructor(public http: HttpClient) {
  this.Title = "MES DEFIBRILATEURS";
 
- 
 
 
-/* 
-  Appel D'api permettant de dynamiser notre html en indiquant le end-point de notre serveur NODE JS ( Api_creation) 
+
+/*
+  Appel D'api permettant de dynamiser notre html en indiquant le end-point de notre serveur NODE JS ( Api_creation)
   Test effectué avec console log afin de voir si la requête est ok  */
 
   }
 
   ngOnInit():void{
-    this.http.get<any>('http://localhost:5500/defibrilator')
-     .subscribe(response => {
-      this.defibrilator = response[0];
-    
+  this.http.get<any>(`http://localhost:3000/defibrilator/`) .subscribe(response => {
+      this.defibrilators = response;
+        console.log(this.defibrilators);
      });
   }
 }
@@ -68,10 +63,10 @@ constructor(public http: HttpClient) {
 
 
 
- 
- 
-  
-    
+
+
+
+
 
 
 
@@ -109,7 +104,7 @@ constructor(public http: HttpClient) {
 /*export class DefibrilateurComponent implements OnInit {
 
 
-  // Image 
+  // Image
   public logo_lifeaz = "assets/LIFEAZ.png"
   public logo_menu = "assets/icon_menu.png"
   public logo_check = "assets/icon_check.png"
@@ -119,30 +114,30 @@ constructor(public http: HttpClient) {
   public logo_loc = "assets/icon_loc.png"
   public logo_line2 = "assets/Line 2.png"
 
-  // initialiser nos valeurs à apparaitre sur le html 
+  // initialiser nos valeurs à apparaitre sur le html
   ngOnInit():void{
 
   }
 
-  //Texte 
+  //Texte
 
   public Title : string;
   public Menu : string;
    defibrilatorApiUrl = '';
-  
+
    defibrilatorData = {
-   
+
     Serial: '',
     locationName: '',
     locationAddr: '',
     state: '',
    electrodesExpiry: ''
-   
+
   };
 
 
 
-  //variable de notre base de données LifeAz 
+  //variable de notre base de données LifeAz
 /*
   constructor(public http: HttpClient) {
 

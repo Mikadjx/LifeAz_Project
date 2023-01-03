@@ -10,7 +10,7 @@
 <ion-menu contentId="main-content">
 
   <ion-header>
-    
+
     <ion-grid>
       <ion-title class="ion-title">Menu</ion-title>
       <ion-row class=" ion-justify-content-between" id="contentMenu">
@@ -66,114 +66,32 @@
         maintenance, et en rechercher un en particulier.</p>
 
       <!--
-    Création de Card 
+    Création de Card
     Interpolation pour permettre de récuperer les donnée de la bdd par L'intermédiaire de Node JS
     La variable défi nous permet de parcourir chaque ligne de notre table defibrilator  -->
 
-      <section class="card">
+      <section class="card" *ngFor="let defibrilator of defibrilators">
         <ion-card>
           <ion-card-header>
             <h5>{{defibrilator.serial}}</h5>
           </ion-card-header>
           <ion-card-content>
-            <strong>{{defibrilator.locationName}}</strong> {{defibrilator.locationAddr}}
+            <strong>{{defibrilator.locationname}}</strong> {{defibrilator.locationaddr}}
           </ion-card-content>
           <ion-grid>
             <ion-row class=" ion-justify-content-around">
               <ion-col size="8">
 
               </ion-col>
-              <ion-col size="1">
-                <ion-img id="logo_check" [src]="logo_check" alt=" logo"></ion-img>
+              <ion-col size="1" *ngIf="defibrilator.state==0">
+               <ion-img id="logo_check" [src]="logo_check" ></ion-img>
               </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-
-
-        <ion-card>
-          <ion-card-header>
-            <h5>CLA123456789</h5>
-          </ion-card-header>
-          <ion-card-content>
-            Gymnase Pierre Peyroche
-            1Bis Place des Combattants 42980 Elattes
-          </ion-card-content>
-          <ion-grid>
-            <ion-row class=" ion-justify-content-around">
-              <ion-col size="8">
-
-              </ion-col>
-              <ion-col size="1">
-                <ion-img id="logo_check" [src]="logo_check" alt=" logo"></ion-img>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-
-
-
-
-
-        <ion-card>
-          <ion-card-header>
-            <h5>CLA234567890</h5>
-          </ion-card-header>
-          <ion-card-content>
-            École municipale
-            26 Rue Jacques Prévert,
-            42980 Elattes
-          </ion-card-content>
-          <ion-grid>
-            <ion-row class=" ion-justify-content-around">
-              <ion-col size="8">
-
-              </ion-col>
-              <ion-col size="1">
-                <ion-img id="logo_danger" [src]="logo_danger" alt=" logo"></ion-img>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-
-
-        <ion-card>
-          <ion-card-header>
-            <h5>CLA34567890 </h5>
-          </ion-card-header>
-          <ion-card-content>
-            Épicerie Samoreau
-            17 Boulevard du Commandant Kalchman, 42980 Elattes
-          </ion-card-content>
-          <ion-grid>
-            <ion-row class=" ion-justify-content-around">
-              <ion-col size="8">
-
-              </ion-col>
-              <ion-col size="1">
-                <ion-img id="logo_check" [src]="logo_check" alt=" logo"></ion-img>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-
-
-        <ion-card>
-          <ion-card-header>
-            <h5>CLA456789012</h5>
-          </ion-card-header>
-          <ion-card-content>
-            Moussa&Telli Réparation Informatique
-            90 Impasse des Cèdres, 42980 Elattes
-          </ion-card-content>
-          <ion-grid>
-            <ion-row class=" ion-justify-content-around">
-              <ion-col size="8">
-
-              </ion-col>
-              <ion-col size="1">
-                <ion-img id="logo_inter" [src]="logo_inter" alt=" logo"></ion-img>
-              </ion-col>
+              <ion-col size="1" *ngIf="defibrilator.state==1">
+                <ion-img id="logo_inter" [src]="logo_inter" ></ion-img>
+               </ion-col>
+               <ion-col size="1" *ngIf="defibrilator.state==2">
+                <ion-img id="logo_danger" [src]="logo_danger" ></ion-img>
+               </ion-col>
             </ion-row>
           </ion-grid>
         </ion-card>
