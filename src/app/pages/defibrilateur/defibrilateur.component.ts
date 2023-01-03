@@ -16,6 +16,7 @@ import { AnimateTimings } from '@angular/animations';
 export class DefibrilateurComponent implements OnInit {
 
 
+
   // Déclaration de Variable Image
 
   public logo_lifeaz = "assets/LIFEAZ.png"
@@ -28,7 +29,7 @@ export class DefibrilateurComponent implements OnInit {
   public logo_line2 = "assets/Line 2.png"
   public Title : string;
 
- 
+
 
 
   // Déclaration de Variable des informations BDD
@@ -56,7 +57,9 @@ constructor(public http: HttpClient) {
   this.http.get<any>(`http://localhost:3000/defibrilator/`) .subscribe(response => {
       this.defibrilators = response;
         console.log(this.defibrilators);
+
      });
+
   }
 }
 
